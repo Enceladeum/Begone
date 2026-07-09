@@ -7,7 +7,7 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <Version>0.2.0.0</Version>
+        <Version>0.2.1.0</Version>
 
         <!--
           Manifest metadata lives here, not in a hand-written .json. The Dalamud.NET.Sdk
@@ -20,7 +20,7 @@
         <Name>Begone!</Name>
         <InternalName>Begone</InternalName>
         <Author>The Enceladeum</Author>
-        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <AssemblyVersion>0.2.1.0</AssemblyVersion>
         <Punchline>Out of sight, out of mind.</Punchline>
         <Description>Hide NPCs with a single click</Description>
         <RepoUrl>https://github.com/Enceladeum/Begone</RepoUrl>
