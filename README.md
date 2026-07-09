@@ -37,6 +37,29 @@ plugin for FFXIV (Dalamud). For screenshots, roleplay, or just a cleaner scene.
 - Tick **Enable**, then click any dot in the world to hide/show that NPC.
 - Use the inventory's **Restore** buttons, **Restore all on this map**, or **Restore everything** to bring NPCs back.
 
+## Installing
+
+### From the custom repo (recommended)
+
+1. In game, open `/xlsettings` → **Experimental** → **Custom Plugin Repositories**.
+2. Paste this URL into a new row, click the **+**, then **Save**:
+
+   ```
+   https://raw.githubusercontent.com/Enceladeum/DalamudPlugins/main/repo.json
+   ```
+
+   This one URL is The Enceladeum's shared feed: it lists **every** plugin by this
+   author (and any added later), so there's nothing else to track down.
+3. Open the plugin installer (`/xlplugins`), search for **Begone!**, and click **Install**.
+
+### Local dev build
+
+1. Build it with `dotnet build -c Release`. The output folder gets `Begone.dll` and a
+   generated `Begone.json` manifest.
+2. In game, `/xlsettings` → **Experimental** → **Dev Plugin Locations**. Add the path to
+   the built `Begone.dll` (or its folder), save, and hit the reload/scan button.
+3. **Begone!** appears in **Installed Dev Plugins**; enable it.
+
 ## Notes for developers
 The hide lever is `GameObject.RenderFlags |= VisibilityFlags.Model` (`1 << 1`, i.e. `0x02`, the model/appearance
 render-gate that preserves the DrawObject), plus zeroing `NamePlateIconId` so no floating quest marker is left
