@@ -1,0 +1,29 @@
+## Build outputs (this is why compiled DLLs never reach the repo)
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Oo]ut/
+
+## IDE / editor
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+## NuGet
+*.nupkg
+*.snupkg
+
+## OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+## Maintainer-only notes: kept locally, never published to the public repo
+MAINTAINING.md

@@ -1,0 +1,26 @@
+# Dependabot: keep GitHub Actions up to date automatically.
+#
+# Why this exists: GitHub periodically retires the Node.js runtime its
+# JavaScript actions run on (the node20 -> node24 move is the current one).
+# Each action pins its Node version in its OWN manifest, so the only way to
+# clear a "Node.js NN is deprecated" warning is to bump the action to a newer
+# release. Dependabot watches every action used under .github/workflows/ and
+# opens a PR when a newer version ships, so this never has to be tracked by
+# hand again.
+#
+# Scope is github-actions ONLY by design. NuGet is intentionally excluded:
+# the Dalamud SDK is pinned to match the game/Dalamud build and must not
+# auto-bump. (Begone adds no external NuGet packages of its own.)
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    groups:
+      # One PR for all action bumps, not one PR per action.
+      github-actions:
+        patterns:
+          - "*"

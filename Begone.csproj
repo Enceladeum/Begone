@@ -1,0 +1,48 @@
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+    <PropertyGroup>
+        <TargetFramework>net10.0-windows</TargetFramework>
+        <Platforms>x64</Platforms>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Version>0.2.0.0</Version>
+
+        <!--
+          Manifest metadata lives here, not in a hand-written .json. The Dalamud.NET.Sdk
+          generates the manifest at build time and stamps the correct DalamudApiLevel from
+          the SDK you build against; a hardcoded level in a .json is the usual cause of a
+          false "outdated and incompatible" banner. Author is singular; Tags and
+          CategoryTags are semicolon-separated; AssemblyVersion is the reported version.
+          Name carries the display exclamation; InternalName (the on-disk id) does not.
+        -->
+        <Name>Begone!</Name>
+        <InternalName>Begone</InternalName>
+        <Author>The Enceladeum</Author>
+        <AssemblyVersion>0.2.0.0</AssemblyVersion>
+        <Punchline>Out of sight, out of mind.</Punchline>
+        <Description>Hide NPCs in the world with a single click. Tick Enable to show a dot over every visible NPC, then click a dot to hide that NPC; click again to bring it back. Cosmetic and client-side only; everyone else still sees them, and collision is never touched, so you won't fall through anything or walk into invisible walls. Only shows dots for NPCs actually visible to your character (never quest-locked phantoms), and only event NPCs can be hidden (never mobs). Hides are remembered per map, with an inventory and restore controls.</Description>
+        <RepoUrl>https://github.com/Enceladeum/Begone</RepoUrl>
+        <Tags>npc;cosmetic;qol;hide;declutter</Tags>
+        <CategoryTags>other</CategoryTags>
+
+        <!--
+          IconUrl gives the INSTALLED plugin its icon (Dalamud downloads it for
+          repo-installed plugins). No icon exists yet: add images/icon.png to the repo at
+          this path before publish or the installed plugin shows a "?" placeholder. Keep
+          it identical to repo.json's IconUrl.
+        -->
+        <IconUrl>https://raw.githubusercontent.com/Enceladeum/Begone/main/images/icon.png</IconUrl>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!--
+          Dev-load icon: copied next to the DLL so a LOCAL dev build shows its icon. The
+          Exists() guard keeps the build green until images/icon.png is added. This does
+          NOT put the icon in latest.zip (DalamudPackager strips it); the installed icon
+          comes from IconUrl above.
+        -->
+        <None Include="images\icon.png" CopyToOutputDirectory="PreserveNewest" Condition="Exists('images\icon.png')" />
+    </ItemGroup>
+</Project>

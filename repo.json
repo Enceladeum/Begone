@@ -1,0 +1,29 @@
+[
+  {
+    "Author": "The Enceladeum",
+    "Name": "Begone!",
+    "InternalName": "Begone",
+    "Punchline": "Out of sight, out of mind.",
+    "Description": "Hide NPCs in the world with a single click. Tick Enable to show a dot over every visible NPC, then click a dot to hide that NPC; click again to bring it back. Cosmetic and client-side only; everyone else still sees them, and collision is never touched, so you won't fall through anything or walk into invisible walls. Only shows dots for NPCs actually visible to your character (never quest-locked phantoms), and only event NPCs can be hidden (never mobs). Hides are remembered per map, with an inventory and restore controls.",
+    "Changelog": "0.2.0: first release. Tick Enable to show a dot over every visible NPC, then click a dot to hide it; click again to bring it back. Cosmetic and client-side only; hides are remembered per map, with an inventory and restore controls.",
+    "Tags": [ "npc", "cosmetic", "qol", "hide", "declutter" ],
+    "CategoryTags": [ "other" ],
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Enceladeum/Begone",
+    "AssemblyVersion": "0.2.0.0",
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "AcceptsFeedback": true,
+    "DownloadCount": 0,
+    "LastUpdate": 1783559003,
+    "DownloadLinkInstall": "https://github.com/Enceladeum/Begone/releases/latest/download/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/Enceladeum/Begone/releases/latest/download/latest.zip",
+    "DownloadLinkTesting": "https://github.com/Enceladeum/Begone/releases/latest/download/latest.zip",
+    "IconUrl": "https://raw.githubusercontent.com/Enceladeum/Begone/main/images/icon.png"
+  }
+]
