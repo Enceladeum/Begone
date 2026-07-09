@@ -22,7 +22,7 @@
         <Author>The Enceladeum</Author>
         <AssemblyVersion>0.2.0.0</AssemblyVersion>
         <Punchline>Out of sight, out of mind.</Punchline>
-        <Description>Hide NPCs in the world with a single click. Tick Enable to show a dot over every visible NPC, then click a dot to hide that NPC; click again to bring it back. Cosmetic and client-side only; everyone else still sees them, and collision is never touched, so you won't fall through anything or walk into invisible walls. Only shows dots for NPCs actually visible to your character (never quest-locked phantoms), and only event NPCs can be hidden (never mobs). Hides are remembered per map, with an inventory and restore controls.</Description>
+        <Description>Hide NPCs with a single click</Description>
         <RepoUrl>https://github.com/Enceladeum/Begone</RepoUrl>
         <Tags>npc;cosmetic;qol;hide;declutter</Tags>
         <CategoryTags>other</CategoryTags>
